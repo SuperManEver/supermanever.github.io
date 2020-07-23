@@ -1,7 +1,15 @@
-function run() {
+function run($) {
   const CONFIG = {
+    apiKey: 'AIzaSyAJCF24yUduqXVDm6YiOwvzFRC0g5xhA0s',
+    authDomain: 'think-piece-61461.firebaseapp.com',
+    databaseURL: 'https://think-piece-61461.firebaseio.com',
+    projectId: 'think-piece-61461',
+    storageBucket: 'think-piece-61461.appspot.com',
     messagingSenderId: '384403560705',
+    appId: '1:384403560705:web:4d9b60b5845112c5f9e300',
   }
+
+  console.log('LOADED: ', $)
 
   const SERVER_KEY =
     'AAAAWYA82QE:APA91bH7pIlbxM6VYcstdnTDupwciB8WUx-ofYyMljIFKDOd6rB2uESRGmo2mgSKj-5vYoObDL8I2ImklFwpQ7cr-fvVmf9peD_FYNq67_SmjTrjfiZChSXe-zjPMy9w-CDiHrUK8jwz'
@@ -165,6 +173,8 @@ function run() {
   }
 
   function getToken() {
+    console.log('get token')
+
     messaging
       .requestPermission()
       .then(function () {
@@ -308,4 +318,4 @@ function run() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', run)
+$(document).ready(() => run($))
