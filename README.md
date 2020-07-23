@@ -1,17 +1,10 @@
-Test Firebase Cloud Messaging
------------------------------
-
-You can test usage on page: https://peter-gribanov.github.io/serviceworker/
-
-<img src="ScreenRecord.gif" alt="" align="center">
+## Test Firebase Cloud Messaging
 
 > Firebase loses the `image` from the notification.
 > You can fix the problem by specifying a `image` in `data`.
 > And you must see [this](https://github.com/firebase/quickstart-js/issues/71) issue.
 
-
-Send notification from HTTP client
-----------------------------------
+## Send notification from HTTP client
 
 ```
 POST /fcm/send HTTP/1.1
@@ -31,8 +24,7 @@ Content-Type: application/json
 }
 ```
 
-Send notification by cURL
--------------------------
+## Send notification by cURL
 
 ```bash
 curl -d '
@@ -51,8 +43,7 @@ curl -d '
     -X POST "https://fcm.googleapis.com/fcm/send"
 ```
 
-Warning
--------
+## Warning
 
 This application runs in [GitHub Pages](https://pages.github.com/) at address [/serviceworker/](https://peter-gribanov.github.io/serviceworker/) and this path cannot be changed. Therefore, the [original library](http://www.gstatic.com/firebasejs/3.7.2/firebase.js) is [copied](https://github.com/peter-gribanov/serviceworker/blob/master/firebase.js) to this application and the path to `firebase-messaging-sw.js` has been changed.
 
